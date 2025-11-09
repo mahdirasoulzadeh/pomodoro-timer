@@ -21,4 +21,4 @@ Features:
 - 25 min work / 5 min break  
 - Counts completed sessions  
 - Dark / Light mode  
--   
+- and more ...
