@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>تایمر تمرکز (Pomodoro)</h1>
+
+        <div class="timer">
+            <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
+
+        <div class="controls">
+            <button id="start">شروع</button>
+            <button id="pause">توقف</button>
+            <button id="reset">ریست</button>
+        </div>
+
+        <div class="sessions">
+            جلسات کامل شده: <span id="session-count">0</span>
+        </div>
+
+        <div class="mode-toggle">
+            <label>
+                <input type="checkbox" id="dark-mode-toggle">
+                حالت تاریک
+            </label>
+        </div>
+
+        <div class="music-toggle">
+            <label>
+                <input type="checkbox" id="music-toggle" checked>
+                پخش موسیقی پس‌زمینه
+            </label>
+        </div>
+    </div>
+
+    <!-- صداهای پروژه -->
+    <audio id="alarm-sound" src="alarm.mp3" preload="auto"></audio>
+    <audio id="background-music" src="parimusic.mp3" preload="auto" loop></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

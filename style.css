@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f0f0f0, #dcdcdc);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: all 0.3s;
+}
+
+body.dark {
+    background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+    color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+}
+
+body.dark .container {
+    background-color: rgba(44, 44, 44, 0.95);
+}
+
+h1 {
+    margin-bottom: 25px;
+    font-size: 32px;
+}
+
+.timer {
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.controls button {
+    padding: 12px 28px;
+    margin: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+#start { background-color: #4caf50; color: #fff; }
+#pause { background-color: #f44336; color: #fff; }
+#reset { background-color: #2196f3; color: #fff; }
+
+body.dark #start { background-color: #388e3c; }
+body.dark #pause { background-color: #d32f2f; }
+body.dark #reset { background-color: #1976d2; }
+
+.sessions, .mode-toggle, .music-toggle {
+    margin-top: 20px;
+    font-size: 18px;
+}
