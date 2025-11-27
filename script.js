@@ -1,4 +1,3 @@
-// انتخاب عناصر
 const minutesEl = document.getElementById("minutes");
 const secondsEl = document.getElementById("seconds");
 const startBtn = document.getElementById("start");
@@ -18,7 +17,7 @@ let timerInterval = null;
 let isRunning = false;
 let sessions = 0;
 
-// بارگذاری حالت تاریک و تعداد جلسات
+
 if(localStorage.getItem("darkMode") === "true") {
     document.body.classList.add("dark");
     darkModeToggle.checked = true;
@@ -29,7 +28,6 @@ if(localStorage.getItem("sessions")) {
     sessionCountEl.textContent = sessions;
 }
 
-// نمایش تایمر
 function updateTimerDisplay() {
     let m = Math.floor(timer / 60);
     let s = timer % 60;
@@ -37,7 +35,6 @@ function updateTimerDisplay() {
     secondsEl.textContent = s < 10 ? "0" + s : s;
 }
 
-// شروع تایمر
 function startTimer() {
     if(isRunning) return;
     isRunning = true;
@@ -67,14 +64,12 @@ function startTimer() {
     }, 1000);
 }
 
-// توقف تایمر
 function pauseTimer() {
     clearInterval(timerInterval);
     isRunning = false;
     backgroundMusic.pause();
 }
 
-// ریست تایمر
 function resetTimer() {
     clearInterval(timerInterval);
     isRunning = false;
@@ -83,16 +78,13 @@ function resetTimer() {
     backgroundMusic.pause();
 }
 
-// تغییر حالت تاریک
 darkModeToggle.addEventListener("change", () => {
     document.body.classList.toggle("dark");
     localStorage.setItem("darkMode", document.body.classList.contains("dark"));
 });
 
-// دکمه‌ها
 startBtn.addEventListener("click", startTimer);
 pauseBtn.addEventListener("click", pauseTimer);
 resetBtn.addEventListener("click", resetTimer);
 
-// مقدار اولیه نمایش
 updateTimerDisplay();
